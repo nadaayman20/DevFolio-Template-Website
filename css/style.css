@@ -1,0 +1,675 @@
+:root{
+    --mainColor: #0078ff;
+    --paddind-top:80px;
+    --paddind-bottom: 80px;
+    --backgroundColor:#F5F5F5;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+/* Start Shared Data */
+.heading{
+    font-size: 48px;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(30, 30, 30);
+    margin-bottom: 10px;
+}
+.paragrph{
+    text-align: center;
+    font-size: 16px;
+    color: rgb(78, 78, 78);
+    position: relative;
+}
+.paragrph::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    background-color: var(--mainColor);
+    width: 50px;
+    height: 5px;
+}
+/* End Shared Data */
+
+/* Start Header */
+header{
+     background-image: url("../images/intro-bg.jpg");
+     background-size: 100% 100%;
+     background-attachment: fixed;
+     background-position: center;
+}
+.layout{
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: .9;
+}
+header li a{
+    position: relative;
+}
+header li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 3px;
+    left: 10px;
+    background-color: #fff;
+    transition: all 0.2s;
+}
+header li .active::after,
+header li:hover a::after {
+    width: 50%;
+}
+h1{
+    font-size: 80px;
+}
+.contant p::after {
+    content: "";
+    font-size: 40px;
+    animation: typing 20s infinite;
+    -webkit-animation: typing 20s infinite;
+}
+/* End Header */
+
+/* Start About */
+#about{
+   padding-top: var(--paddind-top);
+   background-color: var(--backgroundColor);
+}
+#about .box{
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 6%), 0 2px 5px 0 rgb(0 0 0 / 20%);
+}
+.data h3::after,
+.contact h2::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 90px;
+    height: 3px;
+    background-color: var(--mainColor);
+}
+#about .rate {
+    position: relative;
+    width: 100%;
+    height: 12px;
+    background-color: #cde1f8;
+    margin-bottom: 8px;
+}
+#about .rate::after {
+    content: "";
+    position: absolute;
+    background-color: var(--mainColor);
+    height: 12px;
+}
+.f1::after {
+    width: 85%;
+}
+.f2::after {
+    width: 75%;
+}
+.f3::after {
+    width: 50%;
+}
+.f4::after {
+    width: 90%;
+}
+/* End About */
+
+/* Start Services Section */
+#services{
+    padding-top: var(--paddind-top);
+    padding-bottom: var(--paddind-bottom);
+    background-color: var(--backgroundColor);
+}
+#services .card{
+    border: none;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 6%), 0 2px 5px 0 rgb(0 0 0 / 20%);
+}
+#services .icon{
+    background-color: #fff;
+    width:100px;
+    height: 100px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 10px solid var(--mainColor);
+    border-radius:50% ;
+    transition: all 0.2s;
+}
+#services .card:hover .icon{
+     color: #fff;
+     background-color: var(--mainColor);
+     border-color: #C6DBF8;
+}
+#services .icon i{
+    font-size: 45px;
+}
+/* End Services Section */
+
+/* Start Client Section */
+.client {
+    background-image: url("../images/counters-bg.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+.client .layout {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 120, 255, 0.7);
+}
+.client .icon{
+    width:50px;
+    height: 50px;
+    padding: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 10px solid #C6DBF8;
+    border-radius:50% ;
+ 
+}
+/* End Client Section */
+
+/*  Start Work Section */
+.work {
+    padding-top: var(--paddind-top);
+    padding-bottom: var(--paddind-bottom);
+    background-color: var(--backgroundColor);
+}
+.work .box {
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 6%), 0 2px 5px 0 rgb(0 0 0 / 20%);
+}
+.work .box img {
+    transition: all 0.8s;
+}
+.work .box:hover img {
+    transform: scale(1.3);
+}
+/*  End Work Section */
+
+/* Start person Section */
+.person {
+    background-image: url("../images/overlay-bg.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.person .layout {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 120, 255, 0.7);
+}
+.carousel-indicators [type="button"]{
+    height: 10px;
+    width: 30px;
+}
+.carousel-indicators .active{
+   background-color: black; 
+}
+/* End person Section */
+
+/* Start Blog Section */
+.blog {
+    padding-top: var(--paddind-top);
+    padding-bottom: var(--paddind-bottom);
+    background-color: var(--backgroundColor);
+}
+.blog .card-footer img {
+    width: 32px;
+    border-radius: 50%;
+}
+.blog .card-category{
+    background-color: var(--mainColor);
+}
+.blog h6{
+    font-size: 12px;
+}
+/* End Blog Section */
+
+/*Start contact section*/
+.contact {
+    background-image: url("../images/overlay-bg.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.contact .layout {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 120, 255, 0.7);
+}
+.contact .icon{
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    border: 4px solid var(--mainColor);
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    transition: all 0.2s;
+}
+.contact .icon i {
+    font-size: 22px; 
+}
+.contact  .links .icon:hover {
+    background-color: var(--mainColor);
+    border-color: #cde1f8;
+    color: #fff;
+} 
+
+/* End contact section*/
+
+/* Start Animation*/
+@keyframes typing {
+    0% {
+        content: "";
+    }
+
+    2% {
+        content: "C|";
+    }
+
+    3% {
+        content: "CE}";
+    }
+
+    4% {
+        content: "CEO|";
+    }
+
+    5% {
+        content: "CEO D|";
+    }
+
+    6% {
+        content: "CEO De|";
+    }
+
+    7% {
+        content: "CEO Dev|";
+    }
+
+    9% {
+        content: "CEO DevF|";
+    }
+
+    10% {
+        content: "CEO DevFo|";
+    }
+
+    11% {
+        content: "CEO DevFol|";
+    }
+
+    12% {
+        content: "CEO DevFoli|";
+    }
+
+    13% {
+        content: "CEO DevFolio|";
+    }
+
+    14% {
+        content: "CEO DevFoli|";
+    }
+
+    16% {
+        content: "CEO DevFol|";
+    }
+
+    17% {
+        content: "CEO DevFo|";
+    }
+
+    18% {
+        content: "CEO DevF|";
+    }
+
+    19% {
+        content: "CEO Dev|";
+    }
+
+    20% {
+        content: "CEO De|";
+    }
+
+    22% {
+        content: "CEO D|";
+    }
+
+    23% {
+        content: "CEO|";
+    }
+
+    24% {
+        content: "CE|";
+    }
+
+    25% {
+        content: "C|";
+    }
+
+    26% {
+        content: "|";
+    }
+
+    27% {
+        content: "W|";
+    }
+
+    28% {
+        content: "We|";
+    }
+
+    29% {
+        content: "Web|";
+    }
+
+    31% {
+        content: "Web D|";
+    }
+
+    32% {
+        content: "Web De|";
+    }
+
+    33% {
+        content: "Web Dev|";
+    }
+
+    34% {
+        content: "Web Deve|";
+    }
+
+    35% {
+        content: "Web Devel|";
+    }
+
+    36% {
+        content: "Web Develo|";
+    }
+
+    37% {
+        content: "Web Develop|";
+    }
+
+    38% {
+        content: "Web Develope|";
+    }
+
+    39% {
+        content: "Web Developer|";
+    }
+
+    40% {
+        content: "Web Develope|";
+    }
+
+    42% {
+        content: "Web Develop|";
+    }
+
+    43% {
+        content: "Web Develo|";
+    }
+
+    44% {
+        content: "Web Devel|";
+    }
+
+    45% {
+        content: "Web Deve|";
+    }
+
+    46% {
+        content: "Web Dev|";
+    }
+
+    47% {
+        content: "Web De|";
+    }
+
+    48% {
+        content: "Web Des|";
+    }
+
+    49% {
+        content: "Web Desi|";
+    }
+
+    50% {
+        content: "Web Desig|";
+    }
+
+    51% {
+        content: "Web Design|";
+    }
+
+    52% {
+        content: "Web Designe|";
+    }
+
+    53% {
+        content: "Web Designer|";
+    }
+
+    54% {
+        content: "Web Designe|";
+    }
+
+    55% {
+        content: "Web Design|";
+    }
+
+    56% {
+        content: "Web Desig|";
+    }
+
+    57% {
+        content: "Web Desi|";
+    }
+
+    58% {
+        content: "Web Des|";
+    }
+
+    59% {
+        content: "Web De|";
+    }
+
+    60% {
+        content: "Web D|";
+    }
+
+    61% {
+        content: "F|";
+    }
+
+    62% {
+        content: "Fr|";
+    }
+
+    63% {
+        content: "Fro|";
+    }
+
+    64% {
+        content: "Fron|";
+    }
+
+    65% {
+        content: "Front|";
+    }
+
+    66% {
+        content: "Fronte|";
+    }
+
+    67% {
+        content: "Fronten|";
+    }
+
+    68% {
+        content: "Frontend|";
+    }
+
+    69% {
+        content: "Frontend D|";
+    }
+
+    70% {
+        content: "Frontend De|";
+    }
+
+    71% {
+        content: "Frontend Dev|";
+    }
+
+    72% {
+        content: "Frontend De|";
+    }
+
+    73% {
+        content: "Frontend D|";
+    }
+
+    74% {
+        content: "Frontend|";
+    }
+
+    75% {
+        content: "Fronten|";
+    }
+
+    76% {
+        content: "Fronte|";
+    }
+
+    77% {
+        content: "Front|";
+    }
+
+    78% {
+        content: "Fron|";
+    }
+
+    79% {
+        content: "Fro|";
+    }
+
+    80% {
+        content: "Fr|";
+    }
+
+    81% {
+        content: "F|";
+    }
+
+    82% {
+        content: "|";
+    }
+
+    83% {
+        content: "G|";
+    }
+
+    84% {
+        content: "Gr|";
+    }
+
+    85% {
+        content: "Gra|";
+    }
+
+    86% {
+        content: "Grap|";
+    }
+
+    87% {
+        content: "Graphi|";
+    }
+
+    88% {
+        content: "Graphic|";
+    }
+
+    89% {
+        content: "Graphi De|";
+    }
+
+    90% {
+        content: "Graphic Desi|";
+    }
+
+    91% {
+        content: "Graphi Design|";
+    }
+
+    92% {
+        content: "Graphic Designer|";
+    }
+
+    93% {
+        content: "Graphic Desig|";
+    }
+
+    94% {
+        content: "Graphic De|";
+    }
+
+    95% {
+        content: "Graphic |";
+    }
+
+    96% {
+        content: "Graph|";
+    }
+
+    97% {
+        content: "Grap|";
+    }
+
+    98% {
+        content: "Gra|";
+    }
+
+    99% {
+        content: "Gr|";
+    }
+
+    100% {
+        content: "|";
+    }
+}
+
+/* End Animation*/
+
+/* Start Media Queury*/
+@media screen and (max-width: 992px) {
+    header li .active::after,
+    header li:hover a::after {
+        width: unset;
+    }
+}
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+/* End Media Queury*/
